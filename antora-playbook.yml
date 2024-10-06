@@ -1,0 +1,26 @@
+site:
+  title: Documentation
+  start_page: docs::index.adoc
+content:
+  sources:
+  - url: ./
+    branches: [v*, main]
+    start_path: src
+asciidoc:
+  attributes:
+    kroki-fetch-diagram: true
+    kroki-default-format: svg@
+  extensions:
+  - asciidoctor-kroki
+output:
+  dir: ./docs
+urls:
+  latest_version_segment: latest
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+antora:
+  extensions:
+  - require: '@antora/lunr-extension'
