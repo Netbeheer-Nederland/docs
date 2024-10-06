@@ -1,6 +1,5 @@
 site:
   title: Documentation
-  start_page: docs::index.adoc
 content:
   sources:
   - url: ./
