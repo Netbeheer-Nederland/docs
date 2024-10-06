@@ -16,6 +16,7 @@ asciidoc:
   extensions:
   - asciidoctor-kroki
 output:
+  clean: true
   dir: ./docs
 urls:
   latest_version_segment: latest
