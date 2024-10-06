@@ -11,3 +11,6 @@
 
 # Antora
 /antora-playbook.local.yml
+
+# Build artefacts
+/docs/
