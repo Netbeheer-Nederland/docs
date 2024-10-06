@@ -1,5 +1,6 @@
 site:
   title: Documentation
+  url: https://netbeheer-nederland.github.io/docs
 content:
   sources:
   - url: ./
