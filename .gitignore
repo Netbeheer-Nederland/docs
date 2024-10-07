@@ -14,3 +14,6 @@
 
 # Build artefacts
 /docs/
+
+# IntelliJ IDEA
+/.idea/
