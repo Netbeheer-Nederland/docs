@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  repository_dispatch:
+    types: [updated-doc]
 concurrency:
   group: github-pages
   cancel-in-progress: false
