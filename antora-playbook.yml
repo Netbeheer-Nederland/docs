@@ -5,7 +5,7 @@ content:
   sources:
   - url: ./
     branches: [v*, main]
-    start_path: main_component
+    start_path: root_component
   - url: https://github.com/Netbeheer-Nederland/doc-linkml-modeling-guide
     branches: [v*, main]
   - url: https://github.com/Netbeheer-Nederland/doc-model-types
