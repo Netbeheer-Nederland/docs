@@ -1,0 +1,4 @@
+[[dfn-logical-model]] logical model::
+    A logical model is something different from a xref:#conceptual-model[conceptual model].
+[[dfn-conceptual-model]] conceptual model::
+    It's conceptual for sure.
