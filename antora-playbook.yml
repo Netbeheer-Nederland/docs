@@ -1,10 +1,10 @@
 site:
-  title: Documentation
+  title: Netbeheer Nederland Documentation
   url: https://netbeheer-nederland.github.io/docs
 content:
   sources:
   - url: ./
-    branches: [v*, main]
+    branches: HEAD
     start_path: root_component
   - url: https://github.com/Netbeheer-Nederland/doc-linkml-modeling-guide
     branches: [v*, main]
