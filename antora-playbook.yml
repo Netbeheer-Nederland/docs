@@ -5,13 +5,11 @@ content:
   sources:
   - url: ./
     branches: [v*, main]
-    start_path: src
+    start_path: main_component
   - url: https://github.com/Netbeheer-Nederland/doc-linkml-modeling-guide
     branches: [v*, main]
-    start_path: src
   - url: https://github.com/Netbeheer-Nederland/doc-model-types
     branches: [v*, main]
-    start_path: src
 asciidoc:
   attributes:
     kroki-fetch-diagram: true
