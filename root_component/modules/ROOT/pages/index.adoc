@@ -1,3 +1,7 @@
-= Documentation
+= Netbeheer Nederland Documentation
 
-Welcome.
+This is the website where all documentation for Netbeheer Nederland can be found.
+
+xref:writ
+
+xref:lin
