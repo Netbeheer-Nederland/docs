@@ -1,2 +1,1 @@
-* xref:model-types::model-types.adoc[Model Types]
-* xref:linkml-modeling-guide::index.adoc[LinkML Modeling Guide]
+* xref:writing-guide::index.adoc[]
