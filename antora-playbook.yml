@@ -10,6 +10,7 @@ content:
     branches: v*
 asciidoc:
   attributes:
+    experimental: ''
     kroki-fetch-diagram: true
     kroki-default-format: svg@
   extensions:
