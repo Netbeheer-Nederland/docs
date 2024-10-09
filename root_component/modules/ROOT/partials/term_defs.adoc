@@ -1,6 +1,8 @@
-[[logical-model]] logical model::
-    A logical model is something different from a xref:#conceptual-model[conceptual model].
-[[conceptual-model]] conceptual model::
-    It's conceptual for sure.
+[[documentation-project]] documentation project::
+    A logical collection of writings. Each _documentation project_:
+        * is maintained in its own GitHub repository;
+        * is an Antora component version.
+
 [[root-documentation-project]] root documentation project::
-    The documentation project that aggregates all other documentation projects. It corresponds with the Antora root component.
+    A unique documentation project which aggregates other documentation project such that a single, coherent documentation website can be provided.
+        * It is maintained in the https://github.com/Netbeheer-Nederland/docs[Netbeheer-Nederland/docs] Git repository.
