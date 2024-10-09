@@ -2,3 +2,5 @@
     A logical model is something different from a xref:#conceptual-model[conceptual model].
 [[conceptual-model]] conceptual model::
     It's conceptual for sure.
+[[root-documentation-project]] root documentation project::
+    The documentation project that aggregates all other documentation projects. It corresponds with the Antora root component.
