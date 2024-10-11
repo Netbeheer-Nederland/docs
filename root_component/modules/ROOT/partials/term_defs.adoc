@@ -1,9 +1,0 @@
-[[documentation-project]] documentation project::
-    A work of documentation to be maintained on its own. It is represented as an https://docs.antora.org/antora/latest/component-version/#docs-component[Antora component] with its own Git repository.
-
-[[root-documentation-project]] root documentation project::
-    A special and unique <<documentation-project>> used to generate the <<documentation-website>> from. The content it shows is an aggregate from a selection of <<documentation-project,documentation projects>>. This selection and other configuration of the site generation is done through an https://docs.antora.org/antora/latest/playbook/[Antora playbook]. To tie all this content together a https://docs.antora.org/antora/latest/component-name-key/#root-component[ROOT component] is defined, providing -- among other things -- site-wide navigation.
-
-
-[[documentation-website]] documentation website::
-    The central website which where the documentation can be found. It is generated from the <<root-documentation-project>>, so the content it shows depends on the configuration of that project.
