@@ -6,8 +6,8 @@ content:
   - url: .
     branches: HEAD
     start_path: ./root_component
-  - url: https://github.com/Netbeheer-Nederland/doc-writing-guide
-    branches: v*
+  - url: https://github.com/Netbeheer-Nederland/doc-documentation-manual
+    tags: v*
 asciidoc:
   attributes:
     experimental: ''
