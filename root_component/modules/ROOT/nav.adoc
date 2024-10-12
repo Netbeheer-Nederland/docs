@@ -1,1 +1,1 @@
-* xref:writing-guide::index.adoc[]
+* xref:documentation-manual::index.adoc[]
