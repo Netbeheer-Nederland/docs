@@ -10,6 +10,7 @@ content:
     tags: v*
 asciidoc:
   attributes:
+    page-pagination: ''
     experimental: ''
     kroki-fetch-diagram: true
     kroki-default-format: svg@
