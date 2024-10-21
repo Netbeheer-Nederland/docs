@@ -10,6 +10,8 @@ content:
     tags: v*
   - url: https://github.com/Netbeheer-Nederland/doc-linkml-guide
     tags: v*
+  - url: https://github.com/Netbeheer-Nederland/doc-modeling-guide
+    tags: v*
 asciidoc:
   attributes:
     page-pagination: ''
