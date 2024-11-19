@@ -2,16 +2,15 @@ site:
   title: Netbeheer Nederland Documentation
   url: https://netbeheer-nederland.github.io/docs
 content:
+  tags: ['v+({0..9}).+({0..9})', '!*-*']
+  branches:  # Disable default branch filter. See: https://gitlab.com/antora/antora/-/issues/268
   sources:
   - url: .
     branches: HEAD
     start_path: ./root_component
   - url: https://github.com/Netbeheer-Nederland/doc-documentation-manual
-    tags: v+({0..9}).+({0..9})
   - url: https://github.com/Netbeheer-Nederland/doc-linkml-guide
-    tags: v+({0..9}).+({0..9})
   - url: https://github.com/Netbeheer-Nederland/doc-modeling-guide
-    tags: v+({0..9}).+({0..9})
 asciidoc:
   attributes:
     page-pagination: ''
