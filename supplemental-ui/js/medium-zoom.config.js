@@ -1,4 +1,3 @@
-mediumZoom('.doc img', {
+mediumZoom('.zoomable img', {
   background: '#fff'
 })
-
