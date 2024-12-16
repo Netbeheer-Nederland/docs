@@ -38,7 +38,7 @@
 :local-cache:
 :data-uri-image:
 
-//[[foreword]]
+[[foreword]]
 .Foreword
 International Standard IEC {docnumber} has been prepared by subcommittee {subcommittee-number}: {subcommittee}, of IEC technical committee {technical-committee-number}:{technical-committee}.
 
