@@ -1,2 +1,2 @@
 * xref:documentation-manual::index.adoc[]
-* xref::iec-rice-en.adoc[]
+* xref:linkml-guide::index.adoc[]
