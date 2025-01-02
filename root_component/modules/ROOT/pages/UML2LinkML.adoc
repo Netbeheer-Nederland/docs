@@ -1,97 +1,6 @@
 = Representing UML Class Diagrams in LinkML
 
-== Transformations
-
-=== Multiplicities
-==== General cardinality restrictions
-
-|===
-|UML| LinkML
-
-| `0..1`
-a|
-[source,yaml]
-....
-# Default.
-....
-
-| `0..\*` / `*` / _not specified_
-a|
-[source,yaml]
-....
-multivalued: true
-....
-
-| `1`
-a|
-[source,yaml]
-....
-required: true
-....
-
-| `1..*`
-a|
-[source,yaml]
-....
-required: true
-multivalued: true
-....
-
-|===
-
-==== More specific cardinality restrictions
-
-|===
-|UML| LinkML
-
-| `i`
-
-where `i > 1` and `i ≠ *`
-a|
-[source,yaml]
-....
-exact_cardinality: i
-# required: true
-# multivalued: true
-....
-
-a| `i..*`
-
-where `i > 1`
-a|
-[source,yaml]
-....
-minimum_cardinality: i
-multivalued: true
-# required: true
-....
-
-a| `0..j`
-
-where `j > 1` and `j ≠ *`
-a|
-[source,yaml]
-....
-maximum_cardinality: j
-# multivalued: true
-....
-
-a| `i..j`
-
-where `i, j > 1` and `i, j ≠ *`
-
-a|
-[source,yaml]
-....
-minimum_cardinality: i
-maximum_cardinality: j
-# required: true
-# multivalued: true
-....
-
-|===
-
-NOTE: The commented lines in the LinkML column are values that should be implied, but since not all generators and software will understand more specific cardinality values, it can be wise to explicitly add the `required` and `multivalued` statements as well.
+== Mappings
 
 === Classes
 
@@ -318,6 +227,98 @@ enums:
 
 |===
 
+=== Multiplicities
+==== Common cardinalities
+
+|===
+|UML| LinkML
+
+| `0..1`
+a|
+[source,yaml]
+....
+# Default.
+....
+
+| `0..\*`  or  `*` or _not specified_
+a|
+[source,yaml]
+....
+multivalued: true
+....
+
+| `1`
+a|
+[source,yaml]
+....
+required: true
+....
+
+| `1..*`
+a|
+[source,yaml]
+....
+required: true
+multivalued: true
+....
+
+|===
+
+==== Finer grained cardinalities
+
+|===
+|UML| LinkML
+
+| `i`
+
+where `i > 1` and `i ≠ *`
+a|
+[source,yaml]
+....
+exact_cardinality: i
+# required: true
+# multivalued: true
+....
+
+a| `i..*`
+
+where `i > 1`
+a|
+[source,yaml]
+....
+minimum_cardinality: i
+multivalued: true
+# required: true
+....
+
+a| `0..j`
+
+where `j > 1` and `j ≠ *`
+a|
+[source,yaml]
+....
+maximum_cardinality: j
+# multivalued: true
+....
+
+a| `i..j`
+
+where `i, j > 1` and `i, j ≠ *`
+
+a|
+[source,yaml]
+....
+minimum_cardinality: i
+maximum_cardinality: j
+# required: true
+# multivalued: true
+....
+
+|===
+
+NOTE: The commented lines in the LinkML column are values that are supposed to be implied, but since not all generators and software will understand more specific cardinality values, it can be wise to explicitly add the `required` and `multivalued` statements as well.
+
+
 === Data types
 
 ==== CIM primitives
@@ -536,6 +537,63 @@ These data types might then be represented as custom LinkML types if desired.
 
 |===
 
+=== Names and URIs
+
+|===
+| UML model element | CURIE
+
+a|.Class with attributes
+[plantuml,height=100px]
+....
+@startuml
+class SomeClass {
+  someAttribute
+}
+@enduml
+....
+a|
+[source,yaml]
+....
+classes:
+  SomeClass:
+    class_uri: cim:SomeClass
+    attributes:
+      some_attribute:
+        slot_uri: cim:SomeClass.someAttribute
+....
+
+a|.Relations
+[plantuml,height=100px]
+....
+@startuml
+class SomeClass
+class AnotherClass
+SomeClass "someClass" -- "anotherClass" AnotherClass: SomeRelation
+@enduml
+....
+
+a|
+[source,yaml]
+....
+classes:
+  SomeClass:
+    class_uri: cim:SomeClass
+    slots:
+      - SomeClass.another_class
+  AnotherClass:
+    class_uri: cim:AnotherClass
+    slots:
+      - AnotherClass.some_class
+
+slots:
+  SomeClass.another_class:
+    slot_uri: cim:SomeClass.anotherClass
+  AnotherClass.some_class:
+    slot_uri: cim:AnotherClass.some_class
+....
+
+|===
+
 
 == Assumptions and decisions
 
@@ -546,14 +604,6 @@ These data types might then be represented as custom LinkML types if desired.
 ** Also: `attributes` are actually (and only) attributes.
 ** In the case of the CIM this actually lines up nicely with the URIs assigned to relations, e.g. the slot `Terminal.ConductingEquipments` will have the URI `cim:TerminalConductingEquipments`. Again: consistency and reduction of cognitive load.
 * Aggregations are not inlined, whereas compositions are.
-
-
-
-
-== Linked Data URIs
-
-
-
 
 [bibliography]
 == References
