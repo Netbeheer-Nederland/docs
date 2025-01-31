@@ -2,8 +2,7 @@ site:
   title: Netbeheer Nederland Documentation
   url: https://netbeheer-nederland.github.io/docs
 content:
-  tags: ['v+({1..9}).+({0..9})', '!*-*']
-  branches:  # Disable default branch filter. See: https://gitlab.com/antora/antora/-/issues/268
+  # tags: ['v+({1..9}).+({0..9})', '!*-*']
   sources:
   - url: .
     branches: HEAD
@@ -12,7 +11,17 @@ content:
   - url: https://github.com/Netbeheer-Nederland/doc-linkml-guide
   - url: https://github.com/Netbeheer-Nederland/doc-modeling-guide
   - url: https://github.com/Netbeheer-Nederland/dp-meetdata
-    start_path: docs-src
+    branches: docs
+    start_paths: [v*.*.*]
+  - url: https://github.com/Netbeheer-Nederland/dp-transitietechnieken
+    branches: docs
+    start_paths: [v*.*.*]
+  - url: https://github.com/Netbeheer-Nederland/dp-netburen
+    branches: docs
+    start_paths: [v*.*.*]
+  - url: https://github.com/Netbeheer-Nederland/dp-capaciteitskaart
+    branches: docs
+    start_paths: [v*.*.*]
 asciidoc:
   attributes:
     page-pagination: ''
