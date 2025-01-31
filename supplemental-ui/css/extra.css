@@ -1,5 +1,5 @@
 .truncate {
-  width: 250px;
+  max-width: 50px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -12,8 +12,24 @@
   }
   */
 
-  .relations-diagram img {
+  img {
     max-height: 33vh;
+  }
+
+  nav .nav-list > li {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .75rem;  /* Equal to font-size in TOC. */
+  }
+
+  .toc-menu ul > li {
+    white-space: nowrap;  /* Somehow prevents wrapping at all... Not sure if this is desired. */
+  }
+
+  .table-container {
+    overflow-x: auto;
   }
 
   /*
@@ -26,5 +42,3 @@
   }
   */
 }
-
-
