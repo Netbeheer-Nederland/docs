@@ -19,6 +19,9 @@ content:
   - url: https://github.com/Netbeheer-Nederland/dp-capaciteitskaart
     branches: docs
     start_paths: [v*.*.*]
+  - url: https://github.com/Netbeheer-Nederland/im-tc57cim
+    branches: docs
+    start_paths: [v*.*.*]
 asciidoc:
   attributes:
     page-pagination: ''
